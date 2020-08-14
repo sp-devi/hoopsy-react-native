@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     },
     eventSelector: {
         flex: 1,
-        borderColor: "black",
         justifyContent: "center",
     },
     eventTypeText: {

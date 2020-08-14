@@ -26,6 +26,7 @@ import {
 import Header from './src/components/Header.js';
 import EventTypeSelector from './src/components/EventTypeSelector.js';
 import Footer from './src/components/Footer.js';
+import SportEvent from  './src/components/SportEvent.js';
 
 const App: () => React$Node = () => {
   return (
@@ -37,6 +38,7 @@ const App: () => React$Node = () => {
           style={styles.scrollView}>
           <Header />
           <EventTypeSelector />
+          <SportEvent />
         </ScrollView>
         <View style={{position: 'absolute', left: 0, right: 0, bottom: 0}}>
           <Footer />

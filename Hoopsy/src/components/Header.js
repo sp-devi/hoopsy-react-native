@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, TextInput, Image } from 'react-native';
+import { View, StyleSheet, TextInput, Image, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class Header extends Component {
@@ -12,6 +12,11 @@ export default class Header extends Component {
                         source={require("../../src/assets/hoopsy_logo_2.png")}
                     />
                 </View>
+                <View style={styles.headerLogoName}>
+                    <Text style={styles.headerLogoNameText} >
+                        Hoopsy
+                    </Text>
+                </View>
                 <View style={styles.searchTextIput}>
                     <TextInput
                         style={styles.searchTextIputPlaceholder}
@@ -21,7 +26,7 @@ export default class Header extends Component {
                     />
                 </View>
                 <View style={styles.header}>
-                    <Icon style={styles.imgLogo} name="search" size={30} />
+                    <Icon style={styles.imgLogo} name="search" size={30} color="white"/>
                 </View>
             </View>
         )
@@ -34,11 +39,19 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: 'center',
-        backgroundColor: "#cc7904"
+        backgroundColor: "#cc4400"
     },
     header: {
         height: 45,
-        backgroundColor: "#cc7904"
+        backgroundColor: "#cc4400"
+    },
+    headerLogoNameText: {
+        textAlign: "center",
+        paddingLeft: 5,
+        width: 80,
+        fontSize: 20,
+        fontWeight: "bold",
+        color: "#fff0e6"
     },
     imgLogo: {
         height: 34,
@@ -46,9 +59,11 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     searchTextIput: {
-        flex: 1
+        flex: 1,
+        paddingLeft: 25
     },
     searchTextIputPlaceholder: {
         height: 35,
-    },
+        width: 175,
+    }
 });
