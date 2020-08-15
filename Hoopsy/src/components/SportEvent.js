@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, ImageBackground } from 'react-native';
 
 export default class SportEvent extends Component {
 
@@ -19,9 +19,13 @@ export default class SportEvent extends Component {
                     </View>
                 </View>
                 <View style={styles.eventName}>
-                    <Text style={styles.eventNameText}>
-                        JL Event
-                    </Text>
+                    <ImageBackground
+                        source={require("../../src/assets/bg-masthead-1.jpg")}
+                        style={styles.image}>
+                        <Text style={styles.eventNameText}>
+                            JL Event
+                        </Text>
+                    </ImageBackground>
                 </View>
             </View>
         );
@@ -33,7 +37,9 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: "row",
         backgroundColor: "#ffccb3",
-        margin: 7
+        margin: 7,
+        height: 85,
+        borderRadius: 5
     },
     eventDate: {
         width: 75,
@@ -41,7 +47,7 @@ const styles = StyleSheet.create({
     eventDateText: {
         textAlign: "center"
     },
-    eventDay : {
+    eventDay: {
         textAlign: "center"
     },
     eventName: {
@@ -50,5 +56,10 @@ const styles = StyleSheet.create({
     },
     eventNameText: {
         textAlign: "center"
+    },
+    image: {
+        flex: 1,
+        resizeMode: "cover",
+        justifyContent: "center"
     }
 });
