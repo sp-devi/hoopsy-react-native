@@ -1,32 +1,60 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, ImageBackground } from 'react-native';
+import { View, StyleSheet, Text, ImageBackground, Button } from 'react-native';
+import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
+
+import EventCardJson from './card'
+import AdaptiveCard from 'react-native-adaptivecards';
+
+import EventCard from './EventCard';
 
 export default class SportEvent extends Component {
 
     render() {
         return (
-            <View style={styles.sportEventContainer}>
-                <View style={styles.eventDate}>
+            <View>
+                <EventCard >
                     <View style={styles.eventDate}>
-                        <Text style={styles.eventDateText}>
+                        <View style={styles.eventDate}>
+                            <Text style={styles.eventDateText}>
+                                Nov 3
+                        </Text>
+                        </View>
+                        <View style={styles.eventDay}>
+                            <Text style={styles.eventDateText}>
+                                Tue
+                        </Text>
+                        </View>
+                    </View>
+                    <View style={styles.eventName}>
+                        <ImageBackground
+                            source={require("../../src/assets/bg-masthead-1.jpg")}
+                            style={styles.image}>
+                            <Text style={styles.eventNameText}>
+                                JL Event
+                        </Text>
+                        </ImageBackground>
+                    </View>
+                </EventCard>
+                <View style={styles.sportEventContainer}>
+                    <AdaptiveCard adaptiveCard={EventCardJson.event} />
+                </View>
+                <EventCard >
+                    <Text style={styles.eventNameText}>
+                        JL Event
+                    </Text>
+                </EventCard>
+                <EventCard >
+                    <View>
+                        <Text style={styles.eventNameText}>
                             Nov 3
                         </Text>
                     </View>
-                    <View style={styles.eventDay}>
-                        <Text style={styles.eventDateText}>
-                            Tue
+                    <View>
+                        <Text style={styles.eventNameText}>
+                            Nov 3
                         </Text>
                     </View>
-                </View>
-                <View style={styles.eventName}>
-                    <ImageBackground
-                        source={require("../../src/assets/bg-masthead-1.jpg")}
-                        style={styles.image}>
-                        <Text style={styles.eventNameText}>
-                            JL Event
-                        </Text>
-                    </ImageBackground>
-                </View>
+                </EventCard>
             </View>
         );
     }
