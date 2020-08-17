@@ -11,7 +11,7 @@ export default class SportEvent extends Component {
             <EventCard>
                 <View style={styles.eventDate}>
                     <EventCalendarDate>
-                        November
+                        November 30, 2020
                     </EventCalendarDate>
                 </View>
             </EventCard>
