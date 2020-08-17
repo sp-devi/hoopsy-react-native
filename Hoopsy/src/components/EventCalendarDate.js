@@ -8,7 +8,7 @@ export default class EventCalendarDate extends Component {
     }
 
     getMonth() {
-        return "NOV";
+        return "Nov";
     }
 
     getDay() {
@@ -46,29 +46,41 @@ const styles = StyleSheet.create({
     calendarDateContainer: {
         flexDirection: "column",
         width: 50,
-        borderWidth: 1,
-        
+        borderWidth: 0.5,
+        borderRadius: 5,
+        shadowColor: "gray"
     },
     calendarDateMonth: {
         borderColor: "black",
+        backgroundColor: "orange",
+        
     },
     calendarDateMonthText: {
-        textAlign: "center"
+        textAlign: "center",
+        color: "white",
+        fontSize: 20,
+        fontFamily: "monospace",
     },
     calendarDateDay: {
         borderColor: "black",
-        borderTopWidth: 1,
-        height: 50,
+        borderTopWidth: 0.25,
+        height: 35,
         justifyContent: "center"
     },
     calendarDateDayText: {
-        textAlign: "center"
+        textAlign: "center",
+        fontSize: 35,
+        fontFamily: "sans-serif",
+        fontWeight: "bold"
     },
     calendarDateDayName: {
-        borderColor: "black",
-        borderTopWidth: 1
     },
     calendarDateDayNameText: {
-        textAlign: "center"
+        textAlign: "center",
+        color: "orange",
+        fontFamily: "arial",
+        fontSize: 16,
+        fontFamily: "monospace",
+        fontWeight: "bold"
     }
 });
