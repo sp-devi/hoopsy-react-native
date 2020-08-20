@@ -41,19 +41,21 @@ export default class EventCalendarDate extends Component {
         );
     }
 }
-// </EventCard>
+
 const styles = StyleSheet.create({
     calendarDateContainer: {
         flexDirection: "column",
-        width: 50,
+        width: 70,
+        height: 90,
         borderWidth: 0.5,
-        borderRadius: 5,
-        shadowColor: "gray"
+        borderRadius: 7.5,
+        overflow: "hidden",
+        backgroundColor: "white"
     },
     calendarDateMonth: {
         borderColor: "black",
         backgroundColor: "orange",
-        
+        height: 27,
     },
     calendarDateMonthText: {
         textAlign: "center",
@@ -63,7 +65,6 @@ const styles = StyleSheet.create({
     },
     calendarDateDay: {
         borderColor: "black",
-        borderTopWidth: 0.25,
         height: 35,
         justifyContent: "center"
     },
