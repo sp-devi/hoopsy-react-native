@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, ImageBackground, Text, Button } from 'react-native';
+import { StyleSheet, View, ImageBackground, Text, Button, TouchableOpacity } from 'react-native';
 import EventCalendarDate from './EventCalendarDate';
 
 export default class EventCard extends Component {
@@ -8,7 +8,7 @@ export default class EventCard extends Component {
             <View style={styles.eventCardContainer}>
                 <View style={styles.imageView}>
                     <ImageBackground
-                        source={require("../assets/bg-masthead-1.jpg")}
+                        source={this.props.imgSrc}
                         style={styles.image}>
                         <View style={styles.eventDateView}>
                             <EventCalendarDate eventDate={this.props.eventDate} />
@@ -23,14 +23,18 @@ export default class EventCard extends Component {
                     </View>
                     <View style={styles.eventTimeView}>
                         <Text style={styles.eventTimeText}>
-                            {this.props.eventTime.start} ~  {this.props.eventTime.end}
+                            {this.props.eventTime.start} ~ {this.props.eventTime.end}
                         </Text>
                     </View>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <Button title="join"
-                        color="#cc3300"
-                    />
+                    <View style={styles.joinButton}>
+                        <TouchableOpacity
+                            style={styles.joinButton}
+                            onPress={() => { }}>
+                            <Text style={styles.joinButtonText}>Join</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View >
         )
@@ -56,14 +60,8 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.55,
         shadowRadius: 5,
         marginHorizontal: 15,
-        marginVertical: 15,
+        marginVertical: 5,
         flex: 1,
-        overflow: "hidden",
-        height: 175,
-    },
-    eventCard: {
-        marginHorizontal: 15,
-        marginBottom: 100,
     },
     imageView: {
         flex: 6,
@@ -73,7 +71,7 @@ const styles = StyleSheet.create({
     image: {
         resizeMode: "cover",
         justifyContent: "center",
-        height: 120
+        height: 120,
     },
     infoContainer: {
         flex: 1,
@@ -86,28 +84,38 @@ const styles = StyleSheet.create({
     cardTitleView: {
         flex: 1,
         marginHorizontal: 10,
-        marginVertical: 5
+        justifyContent: "center"
     },
     cardTitleText: {
         fontFamily: "sans-serif",
-        fontSize: 17,
+        fontSize: 20,
         fontWeight: "bold",
     },
     eventTimeView: {
         marginHorizontal: 10,
-        marginHorizontal: 10,
-        marginVertical: 5
+        justifyContent: "center"
+
     },
     eventTimeText: {
         fontFamily: "sans-serif",
-        fontSize: 17,
+        fontSize: 20,
         fontWeight: "bold",
     },
     buttonContainer: {
-        width: 60,
         marginHorizontal: 5,
-        marginVertical: 5
+        marginVertical: 5,
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "flex-end",
     },
     joinButton: {
+        backgroundColor: "orange",
+        paddingHorizontal: 15,
+        paddingVertical: 2,
+        borderRadius: 5
+    },
+    joinButtonText: {
+        fontSize: 17.5,
+        fontWeight: "bold"
     }
 });
