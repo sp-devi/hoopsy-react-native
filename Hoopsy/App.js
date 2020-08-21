@@ -31,10 +31,15 @@ import SportEvent from './src/components/SportEvent.js';
 const App: () => React$Node = () => {
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <View>
+        <View style={{ height: 50 }}>
+          <Header />
+        </View>
+        <View>
+          <EventTypeSelector />
+        </View>
+      </View>
       <View style={{ flex: 1 }}>
-        <Header />
-        <EventTypeSelector />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
