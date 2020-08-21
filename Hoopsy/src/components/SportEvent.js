@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text, ImageBackground, Button } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import EventCard from './EventCard';
-import EventCalendarDate from './EventCalendarDate';
 
 export default class SportEvent extends Component {
 
@@ -15,13 +14,23 @@ export default class SportEvent extends Component {
                     eventTime={{
                         start: "19:00",
                         end: "20:00"
-                    }}>
+                    }}
+                    imgSrc={require("../assets/bg-masthead-2.jpg")}>
+                </EventCard>
+                <EventCard
+                    cardTitle="Sp Event"
+                    eventDate="Nov 12, 2009"
+                    eventTime={{
+                        start: "19:00",
+                        end: "20:00"
+                    }}
+                    imgSrc={require("../assets/bg-masthead-1.jpg")}>
                 </EventCard>
             </View>
         );
     }
 }
-// </EventCard>
+
 const styles = StyleSheet.create({
     eventDateContainer: {
         flex: 1,
