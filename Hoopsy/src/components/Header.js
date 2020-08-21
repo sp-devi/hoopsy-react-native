@@ -26,7 +26,7 @@ export default class Header extends Component {
                     />
                 </View>
                 <View style={styles.header}>
-                    <Icon style={styles.imgLogo} name="search" size={30} color="white"/>
+                    <Icon style={styles.imgLogo} name="search" size={30} color="white" />
                 </View>
             </View>
         )
@@ -39,11 +39,10 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: 'center',
-        backgroundColor: "#cc4400"
+        backgroundColor: "#cc4400",
     },
     header: {
-        height: 45,
-        backgroundColor: "#cc4400"
+        borderWidth: 1,
     },
     headerLogoNameText: {
         textAlign: "center",
@@ -51,7 +50,7 @@ const styles = StyleSheet.create({
         width: 80,
         fontSize: 20,
         fontWeight: "bold",
-        color: "#fff0e6"
+        color: "#fff0e6",
     },
     imgLogo: {
         height: 34,
@@ -60,10 +59,10 @@ const styles = StyleSheet.create({
     },
     searchTextIput: {
         flex: 1,
-        paddingLeft: 25
+        paddingLeft: 25,
     },
     searchTextIputPlaceholder: {
         height: 35,
-        width: 175,
+        width: 225,
     }
 });
