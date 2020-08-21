@@ -33,11 +33,11 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <View style={{ flex: 1 }}>
+        <Header />
+        <EventTypeSelector />
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
-          <Header />
-          <EventTypeSelector />
           <SportEvent />
         </ScrollView>
         <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0 }}>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     padding: 4,
     paddingRight: 12,
     textAlign: 'right',
-  },
+  }
 });
 
 export default App;
