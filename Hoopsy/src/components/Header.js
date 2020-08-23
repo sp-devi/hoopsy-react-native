@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#cc4400",
     },
     header: {
-        borderWidth: 1,
     },
     headerLogoNameText: {
         textAlign: "center",
@@ -64,6 +63,6 @@ const styles = StyleSheet.create({
     searchTextIputPlaceholder: {
         height: 35,
         width: 225,
-        borderRadius: 10
+        borderRadius: 10,
     }
 });
