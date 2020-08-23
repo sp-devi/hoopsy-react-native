@@ -64,5 +64,6 @@ const styles = StyleSheet.create({
     searchTextIputPlaceholder: {
         height: 35,
         width: 225,
+        borderRadius: 10
     }
 });
