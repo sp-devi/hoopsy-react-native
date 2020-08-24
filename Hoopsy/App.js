@@ -27,11 +27,13 @@ import Header from './src/components/Header.js';
 import EventTypeSelector from './src/components/EventTypeSelector.js';
 import Footer from './src/components/Footer.js';
 import SportEvent from './src/components/SportEvent.js';
+import Login from './src/components/Login.js';
 
 const App: () => React$Node = () => {
   return (
     <>
-      <View>
+      <Login />
+      {/* <View>
         <View style={{ height: 50 }}>
           <Header />
         </View>
@@ -48,7 +50,7 @@ const App: () => React$Node = () => {
         <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0 }}>
           <Footer />
         </View>
-      </View>
+      </View> */}
     </>
   );
 };
