@@ -1,0 +1,15 @@
+{
+    "spdev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hoopsy-spdev-13133-authRole",
+            "UnauthRoleArn": "arn:aws:iam::652914042683:role/amplify-hoopsy-spdev-13133-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::652914042683:role/amplify-hoopsy-spdev-13133-authRole",
+            "Region": "ap-southeast-1",
+            "DeploymentBucketName": "amplify-hoopsy-spdev-13133-deployment",
+            "UnauthRoleName": "amplify-hoopsy-spdev-13133-unauthRole",
+            "StackName": "amplify-hoopsy-spdev-13133",
+            "StackId": "arn:aws:cloudformation:ap-southeast-1:652914042683:stack/amplify-hoopsy-spdev-13133/47d732a0-e627-11ea-a96f-06679e986658",
+            "AmplifyAppId": "d3fvdcsnu5t0ct"
+        }
+    }
+}
