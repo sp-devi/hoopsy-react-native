@@ -26,7 +26,7 @@ export default class Login extends Component {
                         style={styles.singInButton}
                         onPress={() => { }}>
                         <Text style={styles.singInButtonText}>
-                            Join
+                            Sign in
                         </Text>
                     </TouchableOpacity>
                 </View>
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
         marginVertical: 15
     },
     singInButton: {
-        backgroundColor: "white"
+        backgroundColor: "white",
+        width: 100
     }
 });
