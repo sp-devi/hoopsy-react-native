@@ -8,7 +8,7 @@ export default class Login extends Component {
                 <View style={styles.emailAddressView}>
                     <TextInput
                         style={styles.emailAddressText}
-                        placeholder="Enter email"
+                        placeholder="Email or Phone"
                         placeholderTextColor="gray"
                         backgroundColor="white"
                     />
@@ -16,7 +16,7 @@ export default class Login extends Component {
                 <View>
                     <TextInput
                         style={styles.passwordText}
-                        placeholder="Enter password"
+                        placeholder="Password"
                         placeholderTextColor="gray"
                         backgroundColor="white"
                     />
