@@ -55,6 +55,9 @@ const styles = StyleSheet.create({
     },
     singInButton: {
         backgroundColor: "white",
-        width: 100
+        width: "100%",
+    },
+    singInButtonText: {
+        textAlign: "center"
     }
 });
